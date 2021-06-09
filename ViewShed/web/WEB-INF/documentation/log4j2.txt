@@ -1,0 +1,73 @@
+Read the file log4j2.xml first or concurrently with this file.
+Table below shows you the log4j2 Levels and the weight for each of them:
+LEVEL	Weight
+OFF	0
+FATAL	100
+ERROR	200
+WARN	300
+INFO	400
+DEBUG	500
+TRACE	600
+ALL	Integer.MAX_VALUE
+To make sure Log events have been displayed, the Logger' Configuration Level should be grater than or equal to Log event’s level.
+
+The following pattern information is from:
+https://logging.apache.org/log4j/2.x/manual/layouts.html
+
+ %-5p means the priority of the logging event should be left justified to a width of five characters. 
+c{precision} or logger{precision}
+When the precision specifier is an integer value, it reduces the size of the logger name. 
+If the number is positive, the layout prints the corresponding number of rightmost logger name components. 
+If negative, the layout removes the corresponding number of leftmost logger name components. 
+Pattern  Logger                 Result
+%c{1} 	org.apache.commons.Foo 	Foo
+%c{2} 	org.apache.commons.Foo 	commons.Foo
+%c{10} 	org.apache.commons.Foo 	org.apache.commons.Foo
+
+d or date
+Pattern 	Example
+%d{DEFAULT} 	2012-11-02 14:34:02,781
+%d{ISO8601} 	2012-11-02T14:34:02,781
+%d{ISO8601_BASIC} 	20121102T143402,781
+%d{ABSOLUTE} 	14:34:02,781
+%d{DATE} 	02 Nov 2012 14:34:02,781
+%d{COMPACT} 	20121102143402781
+%d{HH:mm:ss,SSS} 	14:34:02,781
+%d{dd MMM yyyy HH:mm:ss,SSS} 	02 Nov 2012 14:34:02,781
+%d{HH:mm:ss}{GMT+0} 	18:34:02
+%d{UNIX} 	1351866842
+%d{UNIX_MILLIS} 	1351866842781
+
+
+Outputs the Throwable trace bound to the LoggingEvent, by default this will 
+output the full trace as one would normally find with a call to Throwable.printStackTrace().
+You can follow the throwable conversion word with an option in the form %throwable{option}.
+%throwable{short} outputs the first line of the Throwable.
+%throwable{short.className} outputs the name of the class where the exception occurred.
+%throwable{short.methodName} outputs the method name where the exception occurred.
+%throwable{short.fileName} outputs the name of the class where the exception occurred.
+%throwable{short.lineNumber} outputs the line number where the exception occurred.
+%throwable{short.message} outputs the message.
+%throwable{short.localizedMessage} outputs the localized message.
+%throwable{n} outputs the first n lines of the stack trace.
+Specifying %throwable{none} or %throwable{0} suppresses output of the exception. 
+
+%t --> Outputs the name of the thread that generated the logging event.
+
+%m -- > Outputs the application supplied message associated with the logging event.
+
+%n --> Outputs the platform dependent line separator character or characters.
+This conversion character offers practically the same performance as using 
+non-portable line separator strings such as "\n", or "\r\n". 
+Thus, it is the preferred way of specifying a line separator. 
+
+%level{WARN=Warning, DEBUG=Debug, ERROR=Error, TRACE=Trace, INFO=Info} 
+Replaces level with different string
+
+%L or %line --> Outputs the line number from where the logging request was issued.
+Generating line number information (location information) is an expensive operation 
+and may impact performance. Use with caution.
+
+%M or %method --> Outputs the method name where the logging request was issued.
+Generating the method name of the caller (location information) is an expensive 
+operation and may impact performance. Use with caution.

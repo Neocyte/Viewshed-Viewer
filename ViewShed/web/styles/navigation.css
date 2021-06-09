@@ -1,0 +1,304 @@
+/*
+ * Styling for the navigation on the main page
+ *
+ * @author Mason Wu
+ */
+
+/* -------------------------------------------General--------------------------------------------- */
+
+html,
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+#container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-container {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    text-align: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #6F263D;
+    color: white;
+}
+
+/* -------------------------------------------Search Bar--------------------------------------------- */
+
+.esri-search {
+    width: 15% !important;
+}
+
+/* main container */
+.search-bar {
+    position: absolute;
+    top: 4.8%;
+    left: 10%;
+    transform: translate(-50%,-50%);
+    transition: all 1s;
+    width: 100%;
+    height: 50px;
+    background: white;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 4px solid white;
+    padding: 0;
+    z-index: 98;
+}
+
+/* input container */
+input.esri-input.esri-search__input {
+    width: 100%;
+    height: 100%;
+    line-height: 30px;
+    outline: 0;
+    border: 0;
+    display: block;
+    font-size: 1.2em;
+    border-radius: 5px;
+    padding: 0 20px;
+}
+
+input.esri-input.esri-search__input::placeholder {
+    color: #282828;
+}
+
+/* suggestion list */
+ul.esri-menu__list.esri-search__suggestions-list {
+    font-size: 1.2em;
+}
+
+/* search button container */
+button.esri-search__submit-button.esri-widget--button {
+    box-sizing: border-box;
+    padding: 10px;
+    width: 10%;
+    height: 100%;
+    border-radius: 5px;
+    text-align: center;
+    transition: all 1s;
+}
+
+button.esri-search__submit-button.esri-widget--button:hover {
+    background: #F3D03E;
+}
+
+/* search icon */
+span.esri-icon-search {
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+@keyframes iconPop {
+    0% {
+        opacity: 1;
+    }
+    10% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    20% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* -------------------------------------------Navigation--------------------------------------------- */
+
+.nav {
+    width: 100%;
+    height: 7.5%;
+    z-index: 1;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.nav-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    text-align: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.nav-container a,
+.logout-button {
+    position: relative;
+    width: 4%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.nav-container a:hover,
+.logout-button:hover {
+    color: #F3D03E;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.nav-3 {
+    border-right: 1px solid white;
+}
+
+.nav-6.grayedOut{
+    color: gray;
+}
+
+/* The hamburger icon */
+.nav-container .icon {
+    display: none; /* hide the hamburger icon for larger screens */
+    color: white;
+    font-size: 30px;
+    margin-right: 5px;
+}
+
+.nav-container a .tooltip,
+.logout-button .tooltip {
+    opacity: 0;
+    position: absolute;
+    font-size: 15px;
+    color: black;
+    background: white;
+    padding: 8px;
+    top: 50px;
+    border-radius: 15%;
+    top: 80px;
+}
+
+.nav-container a .tooltip:after,
+.logout-button .tooltip:after{
+    content: "";
+    position: absolute;
+    background: white;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    height: 18px;
+    width: 18px;
+    top: -10px;
+    left: 25px;
+    overflow: hidden;
+}
+
+.nav-container a:hover > .tooltip,
+.logout-button:hover > .tooltip {
+    animation: iconPop 0.4s ease-out forwards;
+    animation-delay: 0.3s;
+}
+
+/* When the screen is less than 1300px wide, hide all links and show the hamburger icon */
+@media screen and (max-width: 1300px) {
+    .nav-container a,
+    .nav-container form {
+        display: none;
+    }
+
+    .nav-container a.icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        right: 5%;
+    }
+    
+    .esri-search {
+        width: 20% !important;
+    }
+    
+    .search-bar {
+        top: 4.8%;
+        left: 12.5%;
+    }
+
+    /* This "responsive" class will be added by addHamburgerMenu() in navigation.js
+     * When the user clicks on the hamburger menu, the links will be displayed horizontally
+     */
+    .nav-container.responsive {
+        position: absolute;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        right: 0;
+        top: 0;
+        background-color: #2E3234;
+        height: 5.8em;
+    }
+
+    .nav-container.responsive a.icon {
+        position: absolute;
+        right: 4%;
+        top: 0;
+    }
+
+    .nav-container.responsive a,
+    .nav-container.responsive form {
+        display: flex;
+        border: none;
+        width: 6%;
+    }
+
+    .nav-container a:after, a:visited:after,
+    .nav-container form:after, a:visited:after {
+        height: 0;
+    }
+    
+    .nav-container.responsive a:hover,
+    .nav-container.responsive form:hover {
+        transition: 0s;
+    }
+    
+    .nav-container.responsive a .tooltip,
+    .nav-container.responsive form .tooltip {
+        display: none;
+    }
+}
+
+/*LARGE DEVICES*/
+@media screen and (min-width: 1050px) {
+    #streetview {
+        top: 48%;
+    }
+
+    .header {
+        top: 3.5%;
+    }
+}
+
+/* SMALL DEVICES */
+@media screen and (max-width: 600px) {
+    .search-bar {
+        display: none !important;
+    }
+    
+    .nav-container.responsive {
+        height: 5.8em;
+    }
+    
+     .nav-container.responsive a {
+        width: 10%;
+    }
+}

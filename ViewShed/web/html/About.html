@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <script>
+        function openForm() {
+            document.getElementById("contact-us-form").style.display = "block";
+        }
+
+        function closeForm() {
+            document.getElementById("contact-us-form").style.display = "none";
+        }
+ 
+        </script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../styles/generalStyles.css" type="text/css">
+        <link rel="stylesheet" href="../styles/navigation.css" type="text/css">
+        <script src="../javascripts/navigation.js"></script>
+        <script src="../javascripts/logout.js"></script>
+        <title>About Viewshed Viewer</title>
+        <!--Icon Library-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body style='background-color: #909090;'>
+        <div id="about-page-container">
+            <div class="top-container">
+                <h1 class="header">About Viewshed Viewer</h1>
+
+                <nav class="nav">
+                    <div class="nav-container">
+                        <a href="../" class="nav-4">
+                            <i class="fa fa-home fa-2x"></i>
+                            <div class="tooltip">Home</div>
+                        </a>
+                        <a href="javascript:void(0);" class="icon" onclick="addHamburgerMenu()">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    </div>
+                </nav>
+            </div>
+            <button type="button" id="open-button" onclick="openForm()">Contact</button>
+   
+			<!--Container for the about us content-->
+            <section class = "about_container">
+
+                <header class = "content_title_bar" id="add_webcam_header"> 
+                    <div class = "title">
+                        About Us
+                    </div> 
+                </header>
+				
+				<div id="contact-p" style="padding: 30px;">
+					Welcome to our Viewshed Viewer!
+                                                                                       This tool is designed to allow users to view the area visible to any webcam. 
+                                                                                       On our home page, you can navigate the map to see the viewsheds of our current webcams or search for webcams by location or name. 
+                                                                                       Please click on a webcam icon to see more information about that webcam. 
+                                                                                       If available, you will also be able to see the Google Streetview at that location by clicking on the Streetview icon in the navigation bar. 
+                                                                                       You may also use the viewshed calculator on the home page to calculate temporary viewsheds. 
+                                                                                       If you would like to add your own webcams to our site, please create an account and fill out the add webcam form. 
+                                                                                       Please be aware that all webcams added or edited must be approved by an administrator before they will appear on the webcams' map.
+				</div>
+				
+				<div id = "contact-container" style="padding: 30px;">
+                    <table id="contact-table">
+						<tbody>
+							<tr>
+                                                            <td><img src="../images/Karissa_Jelonek.png" alt="A person" height="140" width="140"><div></td>
+								
+								<td>
+                                                                                                                                                            <div class="name">Karissa Jelonek</div>
+                                                                                                                                                            <div>Frontend</div>
+									I was responsible for all frontend 
+									functionality outside of the main page. This 
+									includes the user's list of webcams, forms 
+									to add/edit/delete webcams (complete with 
+									input validation and optional/required 
+									fields), admin tools for managing users and 
+									their webcams (complete with search 
+									functionality), and a "contact us" form.
+								</td>
+							</tr>
+							<tr style="background: rgba(0, 0, 0, 0)">
+                                                            <td><img src="../images/Schyler_Kelsch.png" alt="A person" height="140" width="140"></td>
+
+								<td>
+                                                                                                                                                            <div class="name">Schyler Kelsch</div>
+                                                                                                                                                            <div>Team Leader, Database</div>
+									I was responsible for designing the database 
+									that would be used for this project. This 
+									included writing a database script to create 
+									tables, defining proper constraints 
+									(primary/foreign keys and checks for a range 
+									of correct values), inserting default values 
+									(or null) where appropriate, and auto 
+									incrementing values where appropriate.
+									I also took on team leader responsibilities. 
+									This involved coordinating development plans, 
+									keeping project documents up-to-date, and 
+									being the liason between the team and our user.
+								</td>
+							</tr>
+							<tr>
+                                                            <td><img src="../images/Michael_O'Donnell.jpg" alt="A person" height="140" width="140"></td>
+	
+								<td>
+                                                                                                                                                            <div class="name">Michael O'Donnell</div>
+                                                                                                                                                            <div>Backend</div>
+									I was responsible for all backend 
+									functionality of this project. I wrote most 
+									of the servlets that interface the frontend 
+									with the web server, the classes 
+									that interface the web server with the 
+									database, and the logic for the search bar on 
+									the main page. I also heavily assisted 
+									frontend developers with complex JavaScript 
+									calculations, and wrote the classes that 
+									can automatically fetch webcams from 
+									external APIs (although as of this team's 
+									development cycle, this is not being 
+									implemented, we left this for future 
+									developers to possibly use).
+								</td>
+							</tr>
+							<tr style="background: rgba(0, 0, 0, 0)">
+                                                            <td><img src="../images/Mason_Wu.png" alt="A person" height="140" width="140"></td>
+								
+								<td>
+                                                                                                                                                            <div class="name">Mason Wu</div>
+                                                                                                                                                            <div>Frontend</div>
+									I was responsible for all of the frontend 
+									functionality on the main page, along with 
+									general graphic design for the whole project. 
+									This included the SceneView of the Esri map, 
+									displaying viewsheds on click, displaying 
+									viewsheds for webcams already in the database, 
+									incorporating webcam parameters such as 
+									azimuth, height above ground, and field of 
+									view into the viewshed calculation, screen 
+									widgets for viewshed calculations and Google 
+									StreetView, and a cohesive design language 
+									across the entire project.
+								</td>
+							</tr>
+						</tbody>
+					</table>
+                </div>
+            </section>
+			
+                <form method="POST" action="../ContactUs" id="contact-us-form" name="contactUsForm" class="form-container">
+                    <div id="contact-us-form-questions">Please fill out the form below to contact the system
+                    administrator if you have questions or problems with the Viewshed Viewer.</div>
+                    <br />
+                    <input id="contact-form-textfield" placeholder="Name" required type="text" maxlength="66" size="66" name="name"/> <br />
+                    <input id="contact-form-textfield" placeholder="Email Address" required size="66" maxlength="66" type="email"  name="email" /> <br />
+                    <input id="contact-form-textfield" placeholder="Subject" size="66" required maxlength="66" type="text" name="subject" /> <br />
+                
+                    <textarea placeholder="Message" required name="message" id="contact-form-textarea" cols="68" rows="8"></textarea> <br /><br />
+                    <div id="contact-submit-btn">
+                        <button type="button" id="PopupCancelBtn" onclick="closeForm()">Close</button>
+                        <input class="contact-form" type="submit" value="Send" id="contact-us-submit-btn" name="contactUs" />
+                    </div>
+                    
+                </form>
+            </div>
+    </body>
+</html>

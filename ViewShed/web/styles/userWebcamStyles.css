@@ -1,0 +1,305 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 18, 2021, 6:04:49 PM
+    Author     : kmj83477
+*/
+
+#displayTable {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0px;
+}
+@media screen and (max-width: 800px) { 
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    tr:nth-of-type(odd) {
+        background: #eee;
+    }
+    th {
+        background: #333;
+        color: white;
+        font-weight: bold;
+    }
+    td, th {
+        padding: 6px;
+        border: 1px solid #ccc;
+        text-align: left;
+    }
+    table, tbody, th, td, tr {
+        display: block;
+    }
+    tr th {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    tr {
+        border: 1px solid #ccc;
+    }
+    td {
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;
+    }
+    td:before {
+        position: absolute;
+        top: 6px;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+    }
+    td #tableData {
+        padding-left: 40%;
+    }
+    td:nth-of-type(1):before {content: "Webcam ID"; display: block;}
+    td:nth-of-type(2):before {content: "Webcam Name"; display: block;}
+    td:nth-of-type(3):before {content: "Latitude"; display: block;}
+    td:nth-of-type(4):before {content: "Longitude"; display: block;}
+    td:nth-of-type(5):before {content: "Active?"; display: block;}
+    td:nth-of-type(6):before {content: "Date Submitted"; display: block;}
+    td:nth-of-type(7):before {content: "Approval Status"; display: block;}
+}
+#display-webcam-table {
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    width: 50%;
+}
+#display-webcam-table tr, th, td {
+    border: 2px solid black;
+    padding: 5px;
+}
+
+.user-webcam-btn {
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    align-content: center;
+    text-decoration: none;
+    background: #6F263D; 
+    background: #5a0000;
+    background-image: -webkit-linear-gradient(top, #5a0000, #8c0e0e);
+    background-image: -moz-linear-gradient(top, #5a0000, #8c0e0e);
+    background-image: -ms-linear-gradient(top, #5a0000, #8c0e0e);
+    background-image: -o-linear-gradient(top, #5a0000, #8c0e0e);
+    background-image: linear-gradient(to bottom, #5a0000, #8c0e0e);
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    font-family: Arial;
+    font-size: 20px;
+    color: #ffffff;
+    padding: 5px 20px 5px 20px;
+    border:2px solid #5A0000;
+}
+#my-webcam-header {
+    font-size: 25px;
+    margin-left: auto;
+    margin-right: auto;
+}
+h2 {
+    text-align: center;
+}
+.user-webcam-btn:hover { 
+    cursor: pointer;
+    background-image: -webkit-linear-gradient(top, #fc3c3c, #5a0000);
+    background-image: -moz-linear-gradient(top, #fc3c3c, #5a0000);
+    background-image: -ms-linear-gradient(top, #fc3c3c, #5a0000);
+    background-image: -o-linear-gradient(top, #fc3c3c, #5a0000);
+    background-image: linear-gradient(to bottom, #fc3c3c, #5a0000);
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+}
+#user_webcams_container {
+    display: block;
+    justify-content: center;
+}
+#system-admin-btn {
+    width: 10%;
+    text-align: center;
+}
+
+#display-webcams-btn {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+#display-webcam-form {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#add-a-webcam-btn {
+    background: #6F263D;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 100px;
+    text-align: center;
+    border-radius: 4px;
+}
+
+#add-a-webcam-btn:hover { 
+    cursor: pointer;
+    background-image: -webkit-linear-gradient(top, #fc3c3c, #5a0000);
+    background-image: -moz-linear-gradient(top, #fc3c3c, #5a0000);
+    background-image: -ms-linear-gradient(top, #fc3c3c, #5a0000);
+    background-image: -o-linear-gradient(top, #fc3c3c, #5a0000);
+    background-image: linear-gradient(to bottom, #fc3c3c, #5a0000);
+}
+
+th {
+    border: 1px solid darkgray;
+    cursor: pointer;
+    padding: 5px;
+    border: 2px solid black;
+    z-index: -9999;
+    background: #6F263D;
+    color: white;
+    font-weight: normal; 
+}
+table{
+    background:none;
+}
+
+tr:nth-child(even){
+    border: 2px solid black;
+    background: #eeeeee;
+}
+
+.btns {
+    background: #6F263D;
+    background-image: -webkit-linear-gradient(top, #5a0000, #8c0e0e);
+    background-image: -moz-linear-gradient(top, #5a0000, #8c0e0e);
+    background-image: -ms-linear-gradient(top, #5a0000, #8c0e0e);
+    background-image: -o-linear-gradient(top, #5a0000, #8c0e0e);
+    background-image: linear-gradient(to bottom, #5a0000, #8c0e0e);
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    position: relative;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    font-family: Arial;
+    color: #ffffff;
+    height: 30px;
+    font-family: Arial;
+    border:2px solid #6F263D;
+    width: 100%;
+}
+
+.btns:hover {
+    /*background: #fc3c3c;*/
+    cursor: pointer;
+    background-image: -webkit-linear-gradient(top, #fc3c3c, #5a0000);
+    background-image: -moz-linear-gradient(top, #fc3c3c, #5a0000);
+    background-image: -ms-linear-gradient(top, #fc3c3c, #5a0000);
+    background-image: -o-linear-gradient(top, #fc3c3c, #5a0000);
+    background-image: linear-gradient(to bottom, #fc3c3c, #5a0000);
+}
+
+
+.btns:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btns:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.btns::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.btns:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.btns {
+    animation: moveInBottom 5s ease-out;
+    animation-fill-mode: backwards;
+}
+#admin-bar {
+    padding-top: 1%;
+    padding-bottom: 4px;
+    align-content: center; 
+    flex-direction: row; 
+    justify-content: space-around;
+}
+#admin-function-btn {
+    margin-left: 5px;
+    margin-right: 5px;
+    background: #6F263D;
+    border-radius: 4px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 18px;
+    font-family: Arial;
+    border:2px solid #6F263D;
+}
+
+#admin-function-btn:hover {
+    /*background: #fc3c3c;*/
+    cursor: pointer;
+    background-image: -webkit-linear-gradient(top, #fc3c3c, #5a0000);
+    background-image: -moz-linear-gradient(top, #fc3c3c, #5a0000);
+    background-image: -ms-linear-gradient(top, #fc3c3c, #5a0000);
+    background-image: -o-linear-gradient(top, #fc3c3c, #5a0000);
+    background-image: linear-gradient(to bottom, #fc3c3c, #5a0000);
+}
+
+#user-webcams-msg {
+    font-size: 18px; 
+    width: 33%;
+    margin-left: auto; 
+    margin-right: auto; 
+    text-align: left;
+}
+
+button:hover,input[type = "submit"]:hover {
+    /*background: #fc3c3c;*/
+    cursor: pointer;
+    background-image: -webkit-linear-gradient(top, #fc3c3c, #5a0000);
+    background-image: -moz-linear-gradient(top, #fc3c3c, #5a0000);
+    background-image: -ms-linear-gradient(top, #fc3c3c, #5a0000);
+    background-image: -o-linear-gradient(top, #fc3c3c, #5a0000);
+    background-image: linear-gradient(to bottom, #fc3c3c, #5a0000);
+}
+
+button,input[type = "submit"] {
+    background: #6F263D;
+    border-radius: 4px;
+    font-family: Arial;
+    color: #ffffff;
+    border:2px solid #5A0000;
+}
+#nextPage, #previousPage {
+    padding: 5px 20px 5px 20px;
+}

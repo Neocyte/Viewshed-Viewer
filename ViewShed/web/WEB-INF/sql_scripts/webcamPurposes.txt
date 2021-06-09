@@ -1,0 +1,35 @@
+purposes
+
+Airport
+Animals
+Area
+Bay
+Beach
+Building
+Camping
+City
+Coast 
+College
+Forest
+Golf Course
+Harbor
+Holiday Resort
+Island
+Lake/River
+Landmarks
+Marketplace
+Mountain/Canyon
+Other
+Outdoor
+Park
+Pool
+Public Indoor
+Sky
+Sport Area
+Square/Alley
+Street/Traffic
+Tourist
+Town
+Underwater
+Water
+Weather

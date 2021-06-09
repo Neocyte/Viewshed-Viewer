@@ -1,0 +1,1532 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+
+*/
+/* 
+    Created on : Feb 20, 2015, 1:07:59 PM
+    Author     : drl92822
+*/
+th {
+    background: #6F263D;
+    color: white;
+}
+
+h3{
+    color:white;
+    position:relative;
+    line-height: 50px;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+#tools_selection_container{    
+    /*font-family: "Ariel", Helvetica, san-serif;*/
+    font-weight: bold;
+    color: black;
+    margin-left: 20%;
+    margin-top: 5%;
+}
+
+#tools_container{
+    margin-top: 10%;
+    width: 400px;
+    height: 100%;
+}
+
+#change_password_container{    
+    /*font-family: "Ariel", Helvetica, san-serif;*/
+    font-weight: bold;
+    color: black;
+    margin-left: 20%;
+}
+
+.title_bar_container{
+    width: 100%;
+    text-align: center;
+    height: 50px;
+    background-color: #6F263D;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+     -webkit-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+}
+.content_title_bar{
+    background-color: #6F263D;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    text-align: center;
+    height:auto;
+}
+
+.title{
+    color:white;
+    margin-left:15px;
+    margin-right:15px;
+    margin-bottom: 10px;
+    line-height: 25px;
+    /*font-family: "Ariel", Helvetica, san-serif;*/
+    font-weight: bold;
+    font-size: 20px;
+    padding: 7.5px;
+}
+
+#HeaderText
+{
+    display: inline;
+    /*font-family: "Ariel", Helvetica, san-serif;*/
+    font-weight: bold;    
+    line-height: 50px;
+    color: white;  
+    font-size: 20px;
+    width: 100%;
+    margin-top: 0px;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+#HeaderWithAccountText
+{
+    display: inline;
+    /*font-family: "Ariel", Helvetica, san-serif;*/
+    font-weight: bold;    
+    line-height: 50px;
+    color: white;  
+    font-size: 20px;
+    width: 100%;
+    margin-top: 0px;
+    margin-left: 23%;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+#backPhoto
+{
+    left: 0px;
+    top: 0px;
+    position: fixed;
+    z-index: -1;
+    opacity: 0.75;
+    width: 100%;    
+    height: 100%;
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.link_no_hover:hover{
+    cursor:default;
+}
+
+.dropdown_text{
+    font-size: 14px;
+}
+
+#drop-nav{
+    z-index: 9;
+    margin-right: 40px;
+}
+
+.dropdown_shadow{
+         -webkit-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+}
+.content_container{
+    vertical-align: middle;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid;
+    border-radius: 25px; 
+    background-color: #FFCC99;
+    -webkit-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+ 
+}
+
+.system_messages_t{
+    width:100%;
+    margin-top: 4.5%;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-weight: bold;
+    font-size: 12px 
+    /*background-color: #fffaf0;*/
+}
+
+#message_red_t{
+    background-color: #fffaf0;
+    color:red;
+}
+
+button,input[type = "submit"], #contact-us-submit-btn, #open-button, #PopupCancelBtn, #PopupSubmitBtn {
+    background: #6F263D;
+    border-radius: 4px;
+    /*font-family: Arial;*/
+    color: #ffffff;
+    padding: 5px 20px 5px 20px;
+    border:2px solid #5A0000;
+    font-size: 18px;
+}
+#contact-us-submit-btn {
+    margin-left: 20px;
+}
+#PopupCancelBtn {
+    margin-right: 20px;
+}
+
+button:hover,input[type = "submit"]:hover {
+    /*background: #fc3c3c;*/
+    cursor: pointer;
+    background-image: -webkit-linear-gradient(top, #fc3c3c, #5a0000);
+    background-image: -moz-linear-gradient(top, #fc3c3c, #5a0000);
+    background-image: -ms-linear-gradient(top, #fc3c3c, #5a0000);
+    background-image: -o-linear-gradient(top, #fc3c3c, #5a0000);
+    background-image: linear-gradient(to bottom, #fc3c3c, #5a0000);
+}
+
+th {
+    border: 1px solid darkgray;
+    cursor: pointer;
+    padding: 5px;
+    z-index: -9999;
+}
+table{
+    background:none;
+}
+
+tr:nth-child(even){
+    background: #eeeeee;
+}
+
+.table_content{
+    position:relative;
+    text-align:center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+}
+
+#table_titles{
+    border-collapse: collapse;	
+    padding-top: 5px;
+    padding-bottom: 4px;
+    background-color: gray;
+    color: white;
+}
+
+#table_data{
+    border-collapse: collapse;	
+    background-color: gainsboro;
+    padding-top: 5px;
+    padding-bottom: 4px;
+    position: relative;
+}
+
+#execute_button{
+    margin-top: .5em;
+    width: 250px;
+    margin-left: -1%;
+}
+
+#make_choice_button {
+    margin-left: 5%;
+    margin-right: 5%;
+    float: right;
+}
+
+#control_button{
+    width: 225px;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 22%;
+}
+
+#addGECourse_control_button{
+    width: 150px;
+    text-align: center 
+    /*
+     margin-top: 15px;
+     margin-bottom: 15px;
+     margin-left: 22%;
+    */
+}
+
+/*button.control_button{
+        width: 225px;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 22%;
+}*/
+
+
+
+#control_management_container{
+    margin-top: 10%;
+    width: 400px;
+    max-height:100%;
+}
+
+#small_container{
+    margin-top: 10%;
+    width: 400px;
+    height: 100%;
+}
+
+#small_container #login_form .submit_button:hover {
+    background-image: -webkit-linear-gradient(top, #fc3c3c, #5a0000);
+    background-image: -moz-linear-gradient(top, #fc3c3c, #5a0000);
+    background-image: -ms-linear-gradient(top, #fc3c3c, #5a0000);
+    background-image: -o-linear-gradient(top, #fc3c3c, #5a0000);
+    background-image: linear-gradient(to bottom, #fc3c3c, #5a0000);
+}
+
+#reset_container{
+    margin-top: 10%;
+    width: 400px;
+    height: 215px;
+}
+
+#user_manager_container{
+     margin-top: 10%;
+    width: 400px;
+    height: 300px;
+}
+#login_form{
+    /*font-family: "Ariel", Helvetica, san-serif;*/
+    font-weight: bold;
+    color: black;
+    margin-left: 35px;
+    margin-top: 10px;
+    max-height: 100%;
+}
+
+#edit_webcam_purposes_text_container {
+    font-weight: bold;
+}
+
+#newPurpose {
+    width: 10.5em;
+    font-size: 18px;
+}
+
+input[type="text"]  {
+    width: 12.5em; /*space for user to type */
+    margin-left: 0.5em;    
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+    font-size: 18px;
+}
+
+input[type="password"]  {  /* An attribute selector */
+    width: 15em; /*space for user to type */
+    margin-left: 0.5em;    
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+    font-size: 18px;
+}
+
+#loginPassword
+{
+    width: 12.5em; /*space for user to type */
+    margin-left: 9px;    
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+}
+
+input[type = "submit"].submit_button{
+    margin-top: 20px;
+    width: 150px;
+    background: #6F263D;
+    border-radius: 4px;
+    font-size: 18px;
+}
+
+#login_form input[type = "submit"].submit_button {
+    margin-top: 20px;
+    margin-left: 97.5px;
+    width: 150px;
+    background: #6F263D;
+    border-radius: 4px;
+    font-size: 18px;
+}
+
+input[type = "submit"].submit_button:hover{
+    background-image: -webkit-linear-gradient(top, #5a0000, #8c0e0e);
+    background-image: -moz-linear-gradient(top, #5a0000, #8c0e0e);
+    background-image: -ms-linear-gradient(top, #5a0000, #8c0e0e);
+    background-image: -o-linear-gradient(top, #5a0000, #8c0e0e);
+    background-image: linear-gradient(to bottom, #5a0000, #8c0e0e);
+}
+
+#login_text_container{
+    display:inline-block;
+    font-size: 18px;
+    padding-top: 20px;
+}
+
+#image_message_container{
+    display: inline;
+    float: right;
+    width: 300px;
+    height: 30px;
+    padding-right: 50px;
+    text-align: center;
+}
+
+#image_message_container img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+#changePasswordMessage
+{
+    width: 100%;
+    height: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-wrap: normal;
+    /*font-family: "Ariel", Helvetica, san-serif;*/
+    font-weight: bold;
+    text-align: center;
+    font-size: 14pt;
+    color: red;
+}
+
+#forgetMessage
+{
+    width: 100%;
+    height: 30px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    text-wrap: normal;
+    /*font-family: "Ariel", Helvetica, san-serif;*/
+    font-weight: bold;
+    text-align: center;
+    font-size: 14pt;
+    color: red;    
+}
+
+#semester_filter {
+    alignment-adjust: central;
+    margin-left: 40%;
+    float: left;
+}
+
+#forgot_password {
+    text-align: center;
+    font-weight: bold;
+    padding-right: 10px;
+    font-size: 18px;
+}
+
+#forgot_password_link{
+    padding-left: 5px;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    color: #6F263D;
+}
+
+.table_container{
+    margin-top:2%;
+    max-height:350px;
+    overflow-y: hidden;
+    position: relative;
+    height: 350px;
+    background-color: #DCDCDC;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.modify_table{
+    margin-top:2%;
+    max-height:250px;
+}
+#control_page_container{
+    margin-top: 10%;
+    width: 400px;
+    height: 300px;
+}
+
+
+.btn {
+
+	cursor: pointer;
+	display: inline-block;
+	margin: 15px 30px;
+	outline: none;
+	position: relative;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.btn:after {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+        display: inline-block;
+}
+.icon-add:before {
+	content: url(../images/plusSign.png); 
+        vertical-align:middle;
+}
+.icon-remove:before {
+	content: url(../images/xSign.png); 
+        vertical-align:middle;
+}
+.icon-search:before {
+	content: url(../images/searchicon.png); 
+        vertical-align:middle;
+}
+
+.icon-arrow-right:before {
+	content: url(../images/arrowRight.png); 
+        vertical-align:middle;
+}
+.icon-arrow-left:before {
+	content: url(../images/arrowLeft.png); 
+        vertical-align:middle;
+}
+.icon-menu:before {
+	content: url(../images/menuicon.png); 
+        vertical-align:middle;
+}
+.icon-edit:before {
+	content: url(../images/editIcon.png); 
+        vertical-align:middle;
+}
+.icon-update:before {
+	content: url(../images/update.png); 
+        vertical-align:middle;
+}
+.icon-submit:before {
+	content: url(../images/submitIcon.png); 
+        vertical-align:middle;
+}
+.icon-save:before {
+	content: url(../images/SaveIcon.png); 
+        vertical-align:middle;
+}
+ /*Button 4*/ 
+.btn-4 {
+	color: #fff;
+	overflow: hidden;
+}
+
+
+.btn-4:before {
+	position: relative;
+	height: 100%;
+	font-size: 125%;
+        display: inline-block;
+	color: #fff;
+	-webkit-transition: all .3s;
+	-moz-transition: all .3s;
+	transition: all .3s;
+}
+
+.btn-4:active:before {
+	color: #17954c;
+}
+
+ /*Button 4a*/ 
+.btn-4a:before {
+	left: 155%;
+	top: 0;
+}
+
+.btn-4a:hover:before {
+	left: 75%;
+        display: inline-block;
+}
+ /*Button 4b*/ 
+.btn-4b:before {
+	left: -50%;
+	top: 0;
+}
+
+.btn-4b:hover:before {
+	left: -5%;
+}
+ /*Button 4c*/ 
+.btn-4c:before {
+	left: 170%;
+	top: 0;
+}
+
+.btn-4c:hover:before {
+	left: 100%;
+        display: inline-block;
+}
+/*button 4d*/
+.btn-4d:before {
+	left: -90%;
+	top: 0;
+}
+
+.btn-4d:hover:before {
+	left: -10%;
+}
+
+.submenu { display: none; }
+.menu>li:hover>.submenu { display: block; }
+
+
+/*button 4c*/
+.btn-4e:before {
+	left: -80%;
+	top: 0;
+}
+
+.btn-4e:hover:before {
+	left: -10%;
+}
+
+ /*Button 4c*/ 
+.btn-4f:before {
+	left: 170%;
+	top: 0;
+}
+
+.btn-4f:hover:before {
+	left: 85%;
+        display: inline-block;
+}
+
+.btn-4g:before {
+	left: 170%;
+	top: 0;
+}
+
+.btn-4g:hover:before {
+	left: 80%;
+        display: inline-block;
+}
+
+/*IN CASE OF FORMAT ERROS, COMMENT OUT THE FOLLOWING: */
+.headerUL {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    display: inline;
+}
+
+.headerUL .headerIL {
+    /*font-family: "Ariel", Helvetica, san-serif;*/
+    font-size: 16px;
+    font-weight: bold;
+    /*color:white;  */  
+    line-height: 50px;
+    display: block;
+    float: right;
+    text-decoration: none;
+    position: relative;
+}
+.headerIL .headerUL {
+    display: none;
+}
+.headerUL .headerIL .headerA {
+    display: block;
+    background: #5A0000;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    text-decoration: none;
+    white-space: nowrap;
+    color: white;
+}
+.headerUL .headerIL .headerA:hover {
+    background: #AA0000;
+}
+.headerIL:hover .headerUL {
+    display: block;
+    position: absolute;
+    cursor: pointer;
+}
+.headerIL:hover .headerIL {
+    float: none;
+    cursor: pointer;
+}
+.headerIL:hover .headerA {
+    background: #8A0000;
+    cursor: pointer;
+}
+/*END WARNING*/
+.load_container{
+    position: relative;    
+    left: -50%;
+    border: 2px solid;
+    border-radius: 25px; 
+    background-color: #FFCC99;
+    -webkit-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.loadCenter
+{
+    position: absolute;    
+    left: 50%;
+    top: 20%;
+}
+
+/*
+Stylings for the Change Password Screen
+*/
+#resetPasswordChange{
+   
+    margin-left: -5%;
+}
+#reset_content_container{
+    margin-top: 10%;
+    width: 400px;
+    height: 225px;
+}
+
+
+#resetPasswordCancel{
+
+    margin-right: -15%;
+}
+
+/*
+    Styling for account information pages.
+*/
+#accountInformationTitle {
+    width: 80%;
+    height: 50px;
+    padding-bottom: 15px;
+    text-wrap: normal;
+    /*font-family: "Ariel", Helvetica, san-serif;*/
+    font-weight: bold;
+    text-align: center;
+    font-size: 12pt;
+}
+
+#changeUsernameTitle {
+    width: 100%;
+    height: 50px;
+    padding-top: 5px;
+    text-wrap: normal;
+    /*font-family: "Ariel", Helvetica, san-serif;*/
+    font-weight: bold;
+    text-align: center;
+    font-size: 12pt;
+}
+
+#changeUsernameInput {
+    width: 100%;
+}
+
+/* styles for addGECourses */
+.addGECourse_container {
+    margin-left: 25%;
+    vertical-align: middle;
+}
+
+/*Styles for addWebcam and createAccount JSPs */
+
+#cancel_button, #display-users-btn {
+    margin-top: 1em;
+    width: 150px;
+    margin-left: 7.5%;
+    background: #6F263D;
+    border-radius: 4px;
+    /*font-family: Arial;*/
+    color: #ffffff;
+    padding: 5px 20px 5px 20px;
+    border:2px solid #5A0000;
+    font-size: 18px;
+}
+
+#display-users-btn {
+    background-image: -webkit-linear-gradient(top, #5a0000, #8c0e0e);
+    background-image: -moz-linear-gradient(top, #5a0000, #8c0e0e);
+    background-image: -ms-linear-gradient(top, #5a0000, #8c0e0e);
+    background-image: -o-linear-gradient(top, #5a0000, #8c0e0e);
+    background-image: linear-gradient(to bottom, #5a0000, #8c0e0e);
+}
+
+#cancel_button:hover, #display-users-btn:hover {
+    /*background: #fc3c3c;*/
+    cursor: pointer;
+    background-image: -webkit-linear-gradient(top, #fc3c3c, #5a0000);
+    background-image: -moz-linear-gradient(top, #fc3c3c, #5a0000);
+    background-image: -ms-linear-gradient(top, #fc3c3c, #5a0000);
+    background-image: -o-linear-gradient(top, #fc3c3c, #5a0000);
+    background-image: linear-gradient(to bottom, #fc3c3c, #5a0000);
+}
+
+#add_webcam_form div,
+#edit_webcam_form div,
+#approve_webcam_form div,
+#add_account_form div {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#add_webcam_form input[type="text"],
+#add_webcam_form input[type="email"],
+#add_webcam_form input[type="tel"],
+#add_webcam_form input[type="url"],
+#add_webcam_form input[type="number"],
+#add_webcam_form input[type="textnchange"],
+#add_webcam_form textarea,
+#add_webcam_form select,
+#edit_webcam_form input[type="text"],
+#edit_webcam_form input[type="email"],
+#edit_webcam_form input[type="tel"],
+#edit_webcam_form input[type="url"],
+#edit_webcam_form input[type="number"],
+#edit_webcam_form input[type="textnchange"],
+#edit_webcam_form textarea,
+#edit_webcam_form select,
+#approve_webcam_form input[type="text"],
+#approve_webcam_form input[type="email"],
+#approve_webcam_form input[type="tel"],
+#approve_webcam_form input[type="url"],
+#approve_webcam_form input[type="number"],
+#approve_webcam_form input[type="textnchange"],
+#approve_webcam_form textarea,
+#approve_webcam_form select,
+#add_account_form input[type="text"],
+#add_account_form input[type="email"],
+#add_account_form input[type="tel"],
+#add_account_form input[type="url"],
+#add_account_form input[type="number"],
+#add_account_form input[type="textnchange"],
+#add_account_form input[type="password"],
+#add_account_form textarea,
+#add_account_form select {
+    width: 90%;
+    border: 1px solid #ccc;
+    background: #FFF;
+    margin: 0 0 5px;
+    padding: 5px;
+    font-size: 15px;
+}
+
+#approve_webcam_form input[type="text"],
+#approve_webcam_form input[type="email"],
+#approve_webcam_form input[type="tel"],
+#approve_webcam_form input[type="url"],
+#approve_webcam_form input[type="number"],
+#approve_webcam_form input[type="textnchange"],
+#approve_webcam_form textarea,
+#approve_webcam_form select {
+    width: 70%;
+}
+
+#add_webcam_form input[type="text"]:hover,
+#add_webcam_form input[type="email"]:hover,
+#add_webcam_form input[type="tel"]:hover,
+#add_webcam_form input[type="url"]:hover,
+#add_webcam_form input[type="number"]:hover,
+#add_webcam_form input[type="textnchange"]:hover,
+#add_webcam_form textarea:hover,
+#add_webcam_form select:hover,
+#edit_webcam_form input[type="text"]:hover,
+#edit_webcam_form input[type="email"]:hover,
+#edit_webcam_form input[type="tel"]:hover,
+#edit_webcam_form input[type="url"]:hover,
+#edit_webcam_form input[type="number"]:hover,
+#edit_webcam_form input[type="textnchange"]:hover,
+#edit_webcam_form textarea:hover,
+#edit_webcam_form select:hover,
+#approve_webcam_form input[type="text"]:hover,
+#approve_webcam_form input[type="email"]:hover,
+#approve_webcam_form input[type="tel"]:hover,
+#approve_webcam_form input[type="url"]:hover,
+#approve_webcam_form input[type="number"]:hover,
+#approve_webcam_form input[type="textnchange"]:hover,
+#approve_webcam_form textarea:hover,
+#approve_webcam_form select:hover,
+#add_account_form input[type="text"]:hover,
+#add_account_form input[type="email"]:hover,
+#add_account_form input[type="tel"]:hover,
+#add_account_form input[type="url"]:hover,
+#add_account_form input[type="number"]:hover,
+#add_account_form input[type="textnchange"]:hover,
+#add_account_form input[type="password"]:hover,
+#add_account_form textarea:hover,
+#add_account_form select:hover {
+    -webkit-transition: border-color 0.3s ease-in-out;
+    -moz-transition: border-color 0.3s ease-in-out;
+    transition: border-color 0.3s ease-in-out;
+    border: 1px solid #000;
+}
+
+#cameraLatitudeSeconds,
+#cameraLongitudeSeconds {
+    width: 68.3% !important;
+}
+
+#cameraLatitudeDirection,
+#cameraLongitudeDirection {
+    width: 20% !important;
+}
+
+#HAG {
+    width: 62.5% !important;
+}
+
+#HAGUnits {
+    width: 25% !important;
+}
+
+#minViewRadius,
+#maxViewRadius {
+    width: 62.5% !important;
+}
+
+#minVRUnits,
+#maxVRUnits {
+    width: 25% !important;
+}
+
+.adminEdit #HAG {
+    width: 50% !important;
+}
+
+.adminEdit #HAGUnits {
+    width: 15% !important;
+}
+
+.adminEdit #minViewRadius2, .adminEdit #maxViewRadius2 {
+    width: 60% !important;
+}
+
+.adminEdit #minVRUnits2, .adminEdit #maxVRUnits2 {
+    width: 30% !important;
+}
+
+.th1 {
+    background: #eee;
+    color: black;
+}
+
+#create_account_btn {
+    margin-top: 0;
+    margin-left: 28%;
+    width: 180px;
+}
+
+#create_account_text_container {
+    margin-left: 15px;
+}
+
+#add_webcam_form input:focus,
+#add_webcam_form textarea:focus,
+#edit_webcam_form input:focus,
+#edit_webcam_form textarea:focus,
+#approve_webcam_form input:focus,
+#approve_webcam_form textarea:focus,
+#add_account_form input:focus,
+#add_account_form textarea:focus{
+    outline: 0 !important;
+    border: 1px solid #aaa !important;
+}
+
+#add_webcam_questions_container {
+    width: 72.5%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#add-webcam-container-top {
+    margin-left: 10%;
+}
+
+#add_webcam_container_left {
+    flex: 40%;
+}
+#add_webcam_container_right {
+    flex: 40%;
+    padding-left: 10%;
+}
+#add_webcam_container {
+    width: 33%;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+}
+
+#add_webcam_container #cancel_button {
+    margin-left: 35%;
+}
+
+#edit_webcam_form #cancel_button {
+    margin-left: 20%;
+}
+
+#edit_webcam_form_btns .submit_button {
+    margin-left: 20px;
+    padding: 5px 20px 5px 20px;
+    margin-top: 1em;
+    font-size: 18px;
+}
+
+#add_webcam_btn {
+    margin-left: 20px;
+    padding: 5px 20px 5px 20px;
+    margin-top: 1em;
+    font-size: 18px;
+}
+
+#create_account_text_container {
+    padding-left: 5px;
+}
+
+#create_account_link {
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    padding-top: 10px;
+}
+#create_account_link a {
+    color: #6F263D;
+}
+
+.table_body {
+    margin: auto;
+    width: 50%;
+}
+
+.table_body table {
+    background-color: #eee;
+}
+
+button,input[type = "submit"].btns {
+    background: #6F263D;
+    border-radius: 4px;
+    position: relative;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    /*font-family: Arial;*/
+    padding: 0px;
+    color: #ffffff;
+    width: 100%;
+    height: 30px;
+    border:2px solid #6F263D;
+}
+button,input[type = "submit"].btns:hover {
+    /*background: #fc3c3c;*/
+    cursor: pointer;
+    background-image: -webkit-linear-gradient(top, #5a0000, #8c0e0e);
+    background-image: -moz-linear-gradient(top, #5a0000, #8c0e0e);
+    background-image: -ms-linear-gradient(top, #5a0000, #8c0e0e);
+    background-image: -o-linear-gradient(top, #5a0000, #8c0e0e);
+    background-image: linear-gradient(to bottom, #5a0000, #8c0e0e);
+}
+
+/*Styles for addWebcam and createAccount JSPs end here*/
+
+#display-webcam-table {
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    width: 50%;
+}
+#display-webcam-table tr, th, td {
+    border: 2px solid black;
+    padding: 5px;
+}
+#display-webcams-btn {
+    padding: 5px;
+}
+
+#delete-webcam-button-container {
+    justify-content: center;
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+}
+#delete-webcam-button {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#latdd {
+    display: none;
+}
+#longdd {
+    display: none;
+}
+#azimuthTextFormat {
+    display: none;
+}
+#stateList {
+    display: none;
+}
+#testURL {
+    color: #6F263D;
+    text-decoration: underline;
+    cursor: pointer;
+    pointer-events: auto;
+}
+#displayTable {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 0px 100px 0px;
+}
+#admin-display-webcams {
+    margin-left: auto;
+    margin-right: auto;  
+    width: 100%;
+    text-align: center;
+}
+#display-webcams-btn {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+
+}
+
+#editButton {
+    background: #5a0000;
+    background-image: -webkit-linear-gradient(top, #5a0000, #8c0e0e);
+    background-image: -moz-linear-gradient(top, #5a0000, #8c0e0e);
+    background-image: -ms-linear-gradient(top, #5a0000, #8c0e0e);
+    background-image: -o-linear-gradient(top, #5a0000, #8c0e0e);
+    background-image: linear-gradient(to bottom, #5a0000, #8c0e0e);
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    /*font-family: Arial;*/
+    color: #ffffff;
+    margin: 2px 0px 50px 227px;
+    padding: 7px 33px 5px 33px;
+    border:2px solid #5A0000;
+
+}
+
+#editButton:hover {
+    /*background: #fc3c3c;*/
+    cursor: pointer;
+    background-image: -webkit-linear-gradient(top, #fc3c3c, #5a0000);
+    background-image: -moz-linear-gradient(top, #fc3c3c, #5a0000);
+    background-image: -ms-linear-gradient(top, #fc3c3c, #5a0000);
+    background-image: -o-linear-gradient(top, #fc3c3c, #5a0000);
+    background-image: linear-gradient(to bottom, #fc3c3c, #5a0000);
+}
+
+#display-admin-webcams-btn, #display-users-btn, #display-submitted-webcams-btn {
+    border-radius: 4px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 0px;
+    margin-top: 40px;
+    background: #6F263D;
+    font-size: 18px;
+}
+
+#display-admin-webcams-btn:hover, #display-users-btn:hover, #display-submitted-webcams-btn:hover{
+    background-image: -webkit-linear-gradient(top, #5a0000, #8c0e0e);
+    background-image: -moz-linear-gradient(top, #5a0000, #8c0e0e);
+    background-image: -ms-linear-gradient(top, #5a0000, #8c0e0e);
+    background-image: -o-linear-gradient(top, #5a0000, #8c0e0e);
+    background-image: linear-gradient(to bottom, #5a0000, #8c0e0e);
+}
+
+#display-users-btn, #display-submitted-webcams-btn { 
+    display: inline;
+    margin-left: 0px;
+}
+#display-webcam-form {
+    display: inline;
+}
+
+/*About page styles*/
+#contact-us-form-container {
+    width: 100%; 
+    font-size: 30px;
+    margin-top: 80px; 
+    margin-bottom: 80px;
+}
+#contact-us-form {
+    width: 336px;
+    height: 410px;
+    border-radius: 3px;
+    display: none;
+    background: #F9F9F9;
+    padding: 25px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    border-radius: 4px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#contact-form-textfield  {
+    width: 100%;
+    border: 1px solid #ccc;
+    background: #FFF;
+    margin: 0 0 5px;
+    padding: 10px;
+    font: 400 12px/16px "Roboto", Helvetica, Arial, sans-serif;
+}
+
+#contact-form-textfield:hover, #contact-form-textarea:hover {
+    -webkit-transition: border-color 0.3s ease-in-out;
+    -moz-transition: border-color 0.3s ease-in-out;
+    transition: border-color 0.3s ease-in-out;
+    border: 1px solid #aaa;
+}
+
+#contact-form-textarea {
+    height: 100px;
+    max-width: 100%;
+    font: 400 12px/16px "Roboto", Helvetica, Arial, sans-serif;
+    padding-left: 10px;
+}
+
+#contact-p {
+    margin-left: auto;
+    margin-right: auto;
+    width: 92.5%;
+}
+
+#contact-container {
+    padding-top: 0 !important;
+}
+
+#contact-table td{
+    border: none;
+    padding: 15px;
+}
+
+#contact-table img{
+    box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.75);
+    margin-right: 1em;
+}
+
+#contact-table .name {
+    color: #6F263D;
+}
+
+#contact-table div {
+    font-weight: bold;
+}
+
+.about_container {
+    vertical-align: middle;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid;
+    border-radius: 25px; 
+    background-color: #FFCC99;
+    -webkit-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    width: 50%;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+    font-size: 18px;
+    overflow: hidden;
+}
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+#open-button {
+    color: white;
+    border: none;
+    cursor: pointer;
+    position: fixed;
+    bottom: 23px;
+    left: 28px;
+    width: 110px;
+    z-index: 5;
+    background: #6F263D;
+    border-radius: 4px;
+    font-size: 18px;
+}
+
+#open-button:hover {
+    background-image: -webkit-linear-gradient(top, #5a0000, #8c0e0e);
+    background-image: -moz-linear-gradient(top, #5a0000, #8c0e0e);
+    background-image: -ms-linear-gradient(top, #5a0000, #8c0e0e);
+    background-image: -o-linear-gradient(top, #5a0000, #8c0e0e);
+    background-image: linear-gradient(to bottom, #5a0000, #8c0e0e);
+}
+
+
+/* Add styles to the form container */
+.form-container {
+    display: none;
+    position: fixed;
+    bottom: 20%;
+    right: 30%;
+    z-index: 9;
+    font-size: 20px;
+    width: 600px;
+    background-color: white;
+    border: 3px solid #f1f1f1;
+}
+
+option {
+    line-height: 30px;
+    size: 30px;
+}
+
+/* Set a style for the submit/login button */
+#PopupSubmitBtn, #PopupCancelBtn, #contact-us-submit-btn {
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-bottom:10px;
+    display: inline;
+    width: 100px;
+    background: #6F263D;
+    border-radius: 4px;
+}
+
+#PopupCancelBtn {
+    margin-left: 10%;
+}
+
+#PopupSubmitBtn:hover, #PopupCancelBtn:hover, #contact-us-submit-btn:hover {
+    background-image: -webkit-linear-gradient(top, #5a0000, #8c0e0e);
+    background-image: -moz-linear-gradient(top, #5a0000, #8c0e0e);
+    background-image: -ms-linear-gradient(top, #5a0000, #8c0e0e);
+    background-image: -o-linear-gradient(top, #5a0000, #8c0e0e);
+    background-image: linear-gradient(to bottom, #5a0000, #8c0e0e);
+}
+
+
+#resetGoBack {
+    width: 100px;
+    background: #6F263D;
+}
+
+#resetSubmit {
+    width: 100px;
+    background: #6F263D;
+    margin-right: 10%;
+}
+
+#resetGoBack:hover, #resetSubmit:hover {
+    background-image: -webkit-linear-gradient(top, #5a0000, #8c0e0e);
+    background-image: -moz-linear-gradient(top, #5a0000, #8c0e0e);
+    background-image: -ms-linear-gradient(top, #5a0000, #8c0e0e);
+    background-image: -o-linear-gradient(top, #5a0000, #8c0e0e);
+    background-image: linear-gradient(to bottom, #5a0000, #8c0e0e);
+}
+
+#forgot_message_text_container {
+    text-align: center;
+}
+
+
+/* The popup form - hidden by default */
+.form-popup {
+    width: 336px;
+    height: 225px;
+    border-radius: 3px;
+    display: none;
+    background: #F9F9F9;
+    padding: 25px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    border-radius: 4px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9;
+}
+
+#searchCriteriaUserNumber {
+    display: none;
+}
+#searchCriteriaAdminApproved {
+    display: none;
+}
+#searchCriteriaActive {
+    display: none;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 220px;
+    background-color: white;
+    color: black;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+#searchCriteriaOptions {
+    width: 100%;
+    border: 1px solid #ccc;
+    background: #FFF;
+    margin: 0 0 5px;
+    padding: 10px;
+    font: 400 12px/16px "Roboto", Helvetica, Arial, sans-serif;
+}
+
+.form-popup #PopupCancelBtn {
+    margin-left: 30%;
+}
+
+@media screen and (max-width: 1000px) {
+    #add_webcam_questions_container{
+        flex-wrap: wrap;
+    }
+    input[type = "text"], input[type = "password"], 
+    input[type = "email"]{
+        width: 100px;
+    }
+    .form-popup {
+        position: fixed;
+        top: 0px;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+    }
+    body {
+       overflow-x: auto;
+    }
+    #flexBreak {
+        flex-basis: 100%;
+    }
+    #approve-tables-container {
+        flex-wrap: wrap;
+    }
+ 
+}
+@media screen and (max-width: 1250px) {
+    #contact-form-textarea {
+        width: 100px;
+    }
+    #contact-us-form {
+        position: absolute;
+        top: 0px;
+        width: 100%;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+    }
+    #contact-form-textfield {
+        width: 60%;
+    }
+    #contact-form-textarea {
+        width: 60%;
+    }
+    #displayTable tr {
+        width: 100%;
+    }
+    #approve-table-right-container {
+       
+    }
+}
+@media screen and (max-width: 900px) { 
+    #displayTable table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    #displayTable  tr:nth-of-type(odd) {
+        background: #eee;
+    }
+    #displayTable th {
+        background: #333;
+        color: white;
+        font-weight: bold;
+    }
+    #displayTable td, #displayTable  th {
+        padding: 6px;
+        border: 1px solid #ccc;
+        text-align: left;
+    }
+    #displayTable table, #displayTable tbody, #displayTable th, #displayTable td, #displayTable tr {
+        display: block;
+    }
+    #displayTable tr th {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    #displayTable tr {
+        border: 1px solid #ccc;
+    }
+    #displayTable td {
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+    }
+    #displayTable td:before {
+        position: absolute;
+        top: 6px;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+    }
+    #displayTable td #tableData {
+        padding-left: 40%;
+    }
+    #displayTable td:nth-of-type(1):before {content: "Webcam ID"; display: block;}
+    #displayTable td:nth-of-type(2):before {content: "Webcam Name"; display: block;}
+    #displayTable td:nth-of-type(3):before {content: "Latitude"; display: block;}
+    #displayTable td:nth-of-type(4):before {content: "Longitude"; display: block;}
+    #displayTable td:nth-of-type(5):before {content: "Active?"; display: block;}
+    #displayTable td:nth-of-type(6):before {content: "Date Submitted"; display: block;}
+    #displayTable td:nth-of-type(7):before {content: "Approval Status"; display: block;}
+    
+    #usersTable td:nth-of-type(1):before {content: "User ID"; display: block;}
+    #usersTable td:nth-of-type(2):before {content: "Email"; display: block;}
+    #usersTable td:nth-of-type(3):before {content: "Last Name"; display: block;}
+    #usersTable td:nth-of-type(4):before {content: "First Name"; display: block;}
+    #usersTable td:nth-of-type(5):before {content: "User Role"; display: block;}
+    #usersTable td:nth-of-type(6):before {content: "Account Locked?"; display: block;}
+    #usersTable td:nth-of-type(7):before {content: "Lock"; display: block;}
+    #usersTable td:nth-of-type(8):before {content: "Delete User"; display: block;}
+}
